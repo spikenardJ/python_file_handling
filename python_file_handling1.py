@@ -4,7 +4,7 @@
 
 import os
 
-def list_directory_contents(path): # List and print all files and subdirectories in the given path
+def list_directory_contents(): # List and print all files and subdirectories in the given path
     while True:
         path = input("Enter your directory path to see the contents: ")
         path_contents = os.listdir(path)
@@ -14,4 +14,5 @@ def list_directory_contents(path): # List and print all files and subdirectories
         except FileNotFoundError:
             print("File was not found, please try again")
             return
-        list_directory_contents(path)
+        
+list_directory_contents()
